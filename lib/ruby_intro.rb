@@ -46,14 +46,25 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  "Hello, #{name}"
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
+  first_char = s.downcase[0]
+  consonants.include?(first_char)
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  # check ว่าเริ่มจนจบมีแค่ 0 กับ 1
+  if s.match?(/^[01]+$/)
+    num = s.to_i(2)
+    return num % 4 == 0
+  else
+    return false
+  end
 end
 
 # Part 3
